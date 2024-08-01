@@ -25,6 +25,10 @@ const ProductSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  score:{
+    type:Number,
+    required:true,
+  },
   producttype: {
     type: String,
     required: true,

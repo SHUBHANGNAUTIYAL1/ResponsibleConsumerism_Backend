@@ -3,7 +3,7 @@ import Product from "../models/Products.js";
 // Create a new product
 export const createProduct = async (req, res, next) => {
     try {
-        const { name, image, desc, price, stock, producttype, sale,rating, user ,label1 , label2} = req.body;
+        const { name, image, desc, price,score, stock, producttype, sale,rating, user ,label1 , label2} = req.body;
 
         const newProduct = new Product({
             name,
@@ -17,6 +17,7 @@ export const createProduct = async (req, res, next) => {
             user,
             label1,
             label2,
+            score,
         });
 
         const savedProduct = await newProduct.save();

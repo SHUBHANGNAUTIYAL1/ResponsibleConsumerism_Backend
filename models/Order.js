@@ -14,6 +14,10 @@ const OrderSchema=new mongoose.Schema({
         required:true,
 
     },
+    score:{
+        type:Number,
+        required:true,
+    },
     price:{
         type:Number,
         required:true,

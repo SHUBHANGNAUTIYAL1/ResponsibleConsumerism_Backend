@@ -8,12 +8,12 @@ import jwt from "jsonwebtoken";
 export const register = async (req, res, next) => {
     try {
       const newUser = new User({
-        name: req.body.name,
+       
         age: req.body.age,
         sex: req.body.sex,
         occupation: req.body.occupation,
         shoppingFrequency: req.body.shoppingFrequency,
-        role: req.body.role,
+      
       });
   
       await newUser.save();

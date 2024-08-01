@@ -3,7 +3,7 @@ import Order from "../models/Order.js";
 // Create a new order
 export const createOrder = async (req, res, next) => {
     try {
-        const { name, image, desc, price, quantity, user, rating, label1, label2 } = req.body;
+        const { name, image, desc, price,score, quantity, user, rating, label1, label2 } = req.body;
 
         const newOrder = new Order({
             name,
@@ -15,6 +15,7 @@ export const createOrder = async (req, res, next) => {
             rating,
             label1,
             label2,
+            score,
         });
 
         const savedOrder = await newOrder.save();

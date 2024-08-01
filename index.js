@@ -7,6 +7,7 @@ import ProductRoute from "./routes/product.js"
 import OrderRoute from "./routes/order.js"
 import QuestionRoute from "./routes/Questionnaire.js"
 import logRoute from "./routes/log.js"
+import adminRoute from "./routes/admin.js"
 import cors from 'cors';
 
 const app=express()
@@ -34,6 +35,7 @@ const connect=async()=>{
     app.use('/api/order',OrderRoute);
     app.use('/api/questionnaire',QuestionRoute);
     app.use('/api/logs',logRoute);
+    app.use('/api/admin',adminRoute);
 
 app.listen(8100,()=>{
     connect();
